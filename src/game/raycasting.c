@@ -6,7 +6,7 @@
 /*   By: seunlee2 <seunlee2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 20:40:27 by seunlee2          #+#    #+#             */
-/*   Updated: 2023/12/16 21:55:00 by seunlee2         ###   ########.fr       */
+/*   Updated: 2023/12/17 05:03:12 by seunlee2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	draw(t_ray *r, t_img *img, int x)
 			else
 				color = img->texture[3][TEXHEIGHT * r->tex_y + r->tex_x];
 		}
-		img->buffer[y][x] = color;
+		img->data[SCREENWIDTH * y + x] = color;
 		y++;
 	}
 }

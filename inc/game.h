@@ -6,7 +6,7 @@
 /*   By: seunlee2 <seunlee2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 16:57:12 by seunlee2          #+#    #+#             */
-/*   Updated: 2023/12/16 19:43:49 by seunlee2         ###   ########.fr       */
+/*   Updated: 2023/12/17 04:54:48 by seunlee2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,6 @@ typedef struct s_img
 	int			endian;
 	int			w;
 	int			h;
-	int			buffer[SCREENHEIGHT][SCREENWIDTH];
 	int			**texture;
 }	t_img;
 
@@ -137,7 +136,6 @@ void	set_wall_img(t_game *game, t_img *img, t_mapinfo *map, int idx);
 int		game_loop(t_game *game);
 void	set_floor(t_game *game);
 void	raycasting(t_game *game);
-void	put_img(t_game *game);
 
 void	key_hook_w(t_player *p, t_mapinfo *map);
 void	key_hook_s(t_player *p, t_mapinfo *map);

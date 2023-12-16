@@ -6,7 +6,7 @@
 /*   By: seunlee2 <seunlee2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 20:42:57 by seunlee2          #+#    #+#             */
-/*   Updated: 2023/12/16 20:34:11 by seunlee2         ###   ########.fr       */
+/*   Updated: 2023/12/17 04:56:15 by seunlee2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,7 @@
 void	init_img_more(t_img *img)
 {
 	int	i;
-	int	j;
 
-	i = 0;
-	while (i < SCREENHEIGHT)
-	{
-		j = 0;
-		while (j < SCREENWIDTH)
-			img->buffer[i][j++] = 0;
-		i++;
-	}
 	img->texture = (int **)malloc(sizeof(int *) * 4);
 	if (!(img->texture))
 		error_handler("malloc error", 1);

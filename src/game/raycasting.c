@@ -6,7 +6,7 @@
 /*   By: seunlee2 <seunlee2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 20:40:27 by seunlee2          #+#    #+#             */
-/*   Updated: 2023/12/17 05:03:12 by seunlee2         ###   ########.fr       */
+/*   Updated: 2023/12/17 10:31:20 by seunlee2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,16 @@ void	draw(t_ray *r, t_img *img, int x)
 		if (r->side == 0)
 		{
 			if (r->raydir_x >= 0)
-				color = img->texture[0][TEXHEIGHT * r->tex_y + r->tex_x];
-			else
 				color = img->texture[1][TEXHEIGHT * r->tex_y + r->tex_x];
+			else
+				color = img->texture[0][TEXHEIGHT * r->tex_y + r->tex_x];
 		}
 		else if (r->side == 1)
 		{
 			if (r->raydir_y >= 0)
-				color = img->texture[2][TEXHEIGHT * r->tex_y + r->tex_x];
-			else
 				color = img->texture[3][TEXHEIGHT * r->tex_y + r->tex_x];
+			else
+				color = img->texture[2][TEXHEIGHT * r->tex_y + r->tex_x];
 		}
 		img->data[SCREENWIDTH * y + x] = color;
 		y++;

@@ -6,7 +6,7 @@
 /*   By: seunlee2 <seunlee2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 21:11:37 by seunlee2          #+#    #+#             */
-/*   Updated: 2023/12/16 21:55:45 by seunlee2         ###   ########.fr       */
+/*   Updated: 2023/12/17 10:29:27 by seunlee2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 void	init_ray(t_ray *r, t_player *p, int x)
 {
 	r->camera = 2 * x / (double)SCREENWIDTH - 1;
-	if ((SCREENWIDTH - 1) == x)
-		r->camera = 1.0;
 	r->map_x = (int)p->pos_x;
 	r->map_y = (int)p->pos_y;
 	r->raydir_x = p->dir_x + p->plane_x * r->camera;
